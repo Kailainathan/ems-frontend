@@ -1,17 +1,30 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { Link } from 'react-router-dom'
 
 
 const HeaderComponent = () => {
   return (
-    <div>
-        <header>
-            <nav className='navbar navbar-dark bg-dark'>
-            <a className="navbar-brand" href="https://www.google.com">Employee Management System</a>
-
-            </nav>
-        </header>
-    </div>
+    <header>
+      <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
+        <div className='container'>
+          <Link className='navbar-brand' to='/'>Employee Management System</Link>
+          <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
+            <span className='navbar-toggler-icon'></span>
+          </button>
+          <div className='collapse navbar-collapse' id='navbarNav'>
+            <ul className='navbar-nav ms-auto'>
+              <li className='nav-item'>
+                <Link className='nav-link' to='/employees'>Home</Link>
+              </li>
+              <li className='nav-item'>
+                <Link className='nav-link' to='/add-employee'>Add Employee</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
   )
 }
 

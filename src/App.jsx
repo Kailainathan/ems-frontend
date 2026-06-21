@@ -14,8 +14,10 @@ function App() {
   return (
     <>
        <BrowserRouter>
-        <HeaderComponent />
-         <Routes>
+        <div className="app-root">
+          <HeaderComponent />
+          <main className="content">
+            <Routes>
           {/* // http:localhost:3000 */}
           <Route path ='/' element={<ListEmployeeComponent/>}></Route>
           {/* // http:localhost:3000/employees */}
@@ -24,8 +26,10 @@ function App() {
           <Route path ='/add-employee' element={<EmployeeComponent/>}></Route>
           {/* // http:localhost:3000/employees/edit-employee/1 */}
           <Route path ='/edit-employee/:id' element={<EmployeeComponent/>}></Route>
-         </Routes>
-        <FooterComponent/>
+            </Routes>
+          </main>
+          <FooterComponent/>
+        </div>
       </BrowserRouter>
     </>
   )

@@ -1,0 +1,10 @@
+.footer {
+  background-color: black; /* Dark background color */
+  color: white; /* White text */
+  padding: 20px 0; /* Spacing */
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
